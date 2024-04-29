@@ -1,0 +1,36 @@
+   <title>Cookie Policy</title>
+</head>
+<body>
+    <header>
+        <h1>Cookie Policy</h1>
+    </header>
+    <main>
+        <section>
+            <h2>What are cookies?</h2>
+            <p>Cookies are small text files stored on your device (computer, tablet, or mobile) when you visit certain websites. Cookies help websites remember information about your visit, which can improve your browsing experience and make the site more useful to you.</p>
+        </section>
+        <section>
+            <h2>How and why do we use cookies?</h2>
+            <p>We use cookies to enhance your browsing experience by:</p>
+            <ul>
+                <li>Enabling functionalities that help us provide the services you request.</li>
+                <li>Improving website performance and customizing user experience.</li>
+                <li>Providing analytics to optimize site functionality.</li>
+                <li>Remembering your preferences and allowing you to enter your information less frequently.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Your consent to cookie usage</h2>
+            <p>By using our website, you agree that we can place these types of cookies on your device. You can change your cookie settings at any time.</p>
+        </section>
+        <section>
+            <h2>Managing your cookies</h2>
+            <p>You have the right to decide whether to accept or reject cookies. You can adjust your cookie preferences by altering the settings in your browser. Here is how you can manage cookies on your devices:</p>
+            <ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Drew Bradley. All rights reserved.</p>
+    </footer>
+</body>
+</html>

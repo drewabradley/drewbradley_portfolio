@@ -148,3 +148,26 @@ function initMap() {
       ]
     });
 }
+
+function moveSlide(n, sliderClass) {
+  showSlides(slideIndexes[sliderClass] += n, sliderClass);
+}
+
+var slideIndexes = { a: 1, b: 1, c: 1 };  // Object to keep track of each slider's index
+
+function showSlides(n, sliderClass) {
+  var slides = document.getElementsByClassName("slides " + sliderClass);
+  if (n > slides.length) { slideIndexes[sliderClass] = 1; }
+  if (n < 1) { slideIndexes[sliderClass] = slides.length; }
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndexes[sliderClass] - 1].style.display = "block";
+}
+
+// Initialize all sliders on DOM content loaded
+document.addEventListener("DOMContentLoaded", function() {
+  for (var slider in slideIndexes) {
+    showSlides(slideIndexes[slider], slider);
+  }
+});
