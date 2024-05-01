@@ -149,25 +149,27 @@ function initMap() {
     });
 }
 
-function moveSlide(n, sliderClass) {
-  showSlides(slideIndexes[sliderClass] += n, sliderClass);
-}
+function changePhoto(step, sectionId) {
+  const gallery = document.getElementById(sectionId);
+  const photos = gallery.querySelectorAll('.photo');
+  let currentPhoto = gallery.querySelector('.active');
+  let currentIndex = Array.from(photos).indexOf(currentPhoto);
 
-var slideIndexes = { a: 1, b: 1, c: 1 };  // Object to keep track of each slider's index
-
-function showSlides(n, sliderClass) {
-  var slides = document.getElementsByClassName("slides " + sliderClass);
-  if (n > slides.length) { slideIndexes[sliderClass] = 1; }
-  if (n < 1) { slideIndexes[sliderClass] = slides.length; }
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  currentPhoto.classList.remove('active');
+  let newIndex = currentIndex + step;
+  if (newIndex >= photos.length) {
+      newIndex = 0;
+  } else if (newIndex < 0) {
+      newIndex = photos.length - 1;
   }
-  slides[slideIndexes[sliderClass] - 1].style.display = "block";
+
+  photos[newIndex].classList.add('active');
 }
 
-// Initialize all sliders on DOM content loaded
-document.addEventListener("DOMContentLoaded", function() {
-  for (var slider in slideIndexes) {
-    showSlides(slideIndexes[slider], slider);
+// You can initialize the first image as active for each section if needed.
+document.querySelectorAll('.gallery').forEach(gallery => {
+  const photos = gallery.querySelectorAll('.photo');
+  if (photos.length > 0) {
+      photos[0].classList.add('active');
   }
 });
